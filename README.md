@@ -1,3 +1,3 @@
 # RI-Toolkit Documentation
 
-Available here: https://RI-Toolkit.github.io/rit-docs/
+Available here: https://ri-toolkit.github.io/rit-docs/
