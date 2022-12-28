@@ -1,30 +1,30 @@
 # Discrete-Time Generator
 
-The discrete-time economic scenario generator simulates the trajectories of 11 Australian economic and financial variables: 
+The discrete-time economic scenario generator simulates the trajectories of 11 Australian economic and financial variables (in brackets are the `$names` of the output dataframes): 
 
-(1) 3-month zero-coupon bond yields,
+(1) 3-month zero-coupon bond yields (`$zcp3m_yield`),
 
-(2) 10-year zero-coupon bond spread,
+(2) 10-year zero-coupon bond spread (`$zcp10y_spread`),
 
-(3) NSW home value index,
+(3) NSW home value index (`$home_index`),
 
-(4) NSW home rental yields,
+(4) NSW home rental yields (`$rental_yield`),
 
-(5) Australia GDP,
+(5) Australia GDP (`$GDP`),
 
-(6) Australia CPI,
+(6) Australia CPI (`$CPI`),
 
-(7) S&P/ASX200 closing price,
+(7) S&P/ASX200 closing price (`$ASX200`),
 
-(8) Australian dollar trade-weighted index,
+(8) Australian dollar trade-weighted index (`$AUD`),
 
-(9) Australia mortgage rate,
+(9) Australia mortgage rate (`$mortgage_rate`),
 
-(10) NSW unemployment rate,
+(10) NSW unemployment rate (`$unemployment_rate`),
 
-(11) Stochastic discount factors (pricing kernels).
+(11) Stochastic discount factors (`$discount_factors`).
 
-Factors (3)(5)-(8) were transformed to continuously compounded growth rates for consistency. Factors (1)-(8) (in rates) were fitted using a Vector Autoregressive model (VAR), factors (9)-(10) were respectively expressed as a fixed margin over factors (1)-(2) due to strong correlations, while factor (11) is derived from the fitted VAR model with arbitrage-free assumptions. Further details on model parameter estimation and forecasts can be found in note (a) below. 
+Factors (1)-(8) (in rates) were fitted using a Vector Autoregressive model (VAR), factors (9)-(10) were respectively expressed as a fixed margin over factors (1)-(2) due to strong correlations, while factor (11) is derived from the fitted VAR model with arbitrage-free assumptions. Further details on model parameter estimation and forecasts can be found in note (a) below. 
 
 Vector Autoregression (VAR) is a regression of a time series where the ouput depends linearly on the past values of itself, and the past values of other variables, up to some specfied order: 
 
@@ -44,7 +44,7 @@ The stochastic discount factor is defined as:
 
 ![](https://latex.codecogs.com/svg.image?s_{t&plus;1}&space;=&space;\exp&space;\left(-&space;\mathbf{e}_1&space;^\top&space;\mathbf{z}_t&space;-&space;\frac{1}{2}&space;\mathbf{\lambda}_t^\top&space;\mathbf{\lambda}_t&space;-&space;\mathbf{\lambda}_t^\top&space;\mathbf{\epsilon}_{t&plus;1}&space;\right),)
 
-where ![](https://latex.codecogs.com/svg.image?\mathbf{e}_1^\top&space;\mathbf{z}_t) and ![](https://latex.codecogs.com/svg.image?\mathbf{\epsilon}_t) respectively denote the 3-month zero-coupon bond rates and  the white noises from the fitted VAR model, and ![](https://latex.codecogs.com/svg.image?\mathbf{\lambda}_t) is the market price of risk process which is assumed to be affine over factors (1)-(8). 
+where ![](https://latex.codecogs.com/svg.image?\mathbf{e}_1^\top&space;\mathbf{z}_t) and ![](https://latex.codecogs.com/svg.image?\mathbf{\epsilon}_t) respectively denote the 3-month zero-coupon bond rates and white noises from the fitted VAR model, and ![](https://latex.codecogs.com/svg.image?\mathbf{\lambda}_t) is the market price of risk process which is assumed to be affine over factors (1)-(8). 
 
 
 ---
@@ -56,31 +56,31 @@ where ![](https://latex.codecogs.com/svg.image?\mathbf{e}_1^\top&space;\mathbf{z
 
 &nbsp;&nbsp;&nbsp;&nbsp; num_years : numeric
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *integer denoting number of years to forecast from 01-01-2021.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *integer denoting number of years to forecast from 01-01-2021, default 5 years*
 
 &nbsp;&nbsp;&nbsp;&nbsp; num_paths : numeric
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *integer denoting number of simulations to make for each variable.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *integer denoting number of simulations to make for each variable, default 10 paths*
 
 &nbsp;&nbsp;&nbsp;&nbsp; frequency : character
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *'year', 'quarter' or 'month' denoting the simulation frequency. The base simulation time step is one quarter, Linear interpolation will be used if the required frequency is higher, whereas arithmetic average will be used if the frequency is lower.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *'year', 'quarter' or 'month' denoting the simulation frequency, default 'quarter'. The base simulation time step is one quarter, Linear interpolation will be used if the required frequency is higher, whereas arithmetic average will be used if the frequency is lower.*
 
 &nbsp;&nbsp;&nbsp;&nbsp; perc_change : logical
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *set TRUE for outputs to be expressed as period-by-period percent change. The reference level, i.e., the original values in the first output period, will be appended above the percentage changes for each variable and each trajectory. See note (b) below.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *set TRUE for outputs to be expressed as period-by-period percent change, default FALSE. The reference level, i.e., the original values in the first output period, will be appended above the percentage changes for each variable and each trajectory. See note (b) below.*
 
 &nbsp;&nbsp;&nbsp;&nbsp; return_sdf : logical 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *set TRUE to return the stochastic discount factors.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *set TRUE to return the stochastic discount factors, default TRUE*
 
 &nbsp;&nbsp;&nbsp;&nbsp; seed : numeric
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Specify the seed for simulations*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Specify the seed for simulations, no default*
 
 &nbsp;&nbsp; **Returns:**
 
-&nbsp;&nbsp;&nbsp;&nbsp; A list of 10 dataframes containing simulated trajectories of the 10 variables, or a list of 11 dataframes including the simulated stochastic discount factors if return_sdf is set TRUE from 01-01-2021. See note (c) for explanations on the negativity of output values. 
+&nbsp;&nbsp;&nbsp;&nbsp; A list of 10 dataframes containing simulated trajectories from 01-01-2021 of the 10 variables, or a list of 11 dataframes including the simulated stochastic discount factors if `return_sdf` is set TRUE. Rows are the trajectories (e.g., `trajectory_1`), columns are the time steps (e.g., `2021-01-01`). See note (c) for explanations on the negativity of output values. 
 
 &nbsp;&nbsp; **Usage:**
 
@@ -99,7 +99,7 @@ sim$zcp3m_yield[3,]
 
   (a) Procedure for parameter estimation: 
   
-  * Transformed all inputs to continuously compounded rates, tested for correlation, causality, and stationarity. 
+  * Transformed factors (3),(5)-(8) to continuously compounded growth rates, tested for correlation, causality, and stationarity. 
         
   * Found the optimal lag order for Vector Autoregression using AIC, SIC, HQC. 
         
