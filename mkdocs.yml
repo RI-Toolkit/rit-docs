@@ -6,7 +6,7 @@ theme:
   features:
     - navigation.tabs
     - content.code.annotate
-repo_url: https://github.com/print-hi/retirement-toolkit
+repo_url: https://github.com/RI-Toolkit/rit
 
 
 # =============================================================================
