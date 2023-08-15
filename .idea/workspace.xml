@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ac96cfa2-6d3e-4857-833b-786f856c5cd6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/img/health_state_flowchart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/health_state_workflow/lifetable_output_3state.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/health_state_workflow/lifetable_output_5state.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/health_state_workflow/plot_output_3state.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/health_state_workflow/plot_output_5state.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/health_state_workflow/stats_output_3state.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/img/health_state_workflow/stats_output_5state.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/img/health_state_flowchart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/img/health_state_workflow/lifetable_output_3state.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/img/health_state_workflow/plot_output_3state.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/img/health_state_workflow/plot_output_5state.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/img/health_state_workflow/stats_output_3state.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Health/Statistics/stats_3.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/Statistics/stats_3.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Health/Statistics/stats_5.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/Statistics/stats_5.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Health/simulation.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/simulation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Economic Scenario Generator/top3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Health/Multi State Model/3_state_model.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/Multi State Model/3_state_model.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Health/workflow.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/workflow.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Policy Valuation/cashflow.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Policy Valuation/cashflow.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/3_state_flowchart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/3_state_workflow/lifetable_output.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/3_state_workflow/plot_output.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/img/3_state_workflow/stats_output.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/3_state_flowchart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/3_state_workflow/lifetable_output.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/3_state_workflow/plot_output.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/img/3_state_workflow/stats_output.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,23 +39,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2EOHTNNtfJVnjUA6gJjO5da4GIj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "new__2023",
+    "last_opened_file_path": "C:/Users/z5041702/GitHub/rit-docs",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -41,5 +72,11 @@
       <updated>1662459718846</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
 </project>

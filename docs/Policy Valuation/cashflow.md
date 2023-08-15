@@ -41,7 +41,7 @@ or passed into the *value_policy* function for pricing statistics.
 
 &nbsp;&nbsp;&nbsp;&nbsp; **state** : matrix
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Matrix of health states for $n$ pathways over $m$ periods* (see [Health State](../Health/Health State 3/simulation.md) / [Mortality](../Aggregate Mortality/simulation.md))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Matrix of health states for $n$ pathways over $m$ periods* (see [Health State](../Health/simulation.md) / [Mortality](../Aggregate Mortality/simulation.md))
 
 &nbsp;&nbsp;&nbsp;&nbsp; **econ_var** : list
 

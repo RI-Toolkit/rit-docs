@@ -20,18 +20,18 @@ trans_probs_3 <- get_trans_probs(n_states=3, model_type='T', param_file=US_HRS, 
 lifetable <- create_life_table(trans_probs_3, init_age=87, init_state = 0, cohort = 100000)
 head(lifetable)
 ```
-
+Life table generated for 3-state models:
 <figure markdown>
-  ![lifetable](../../img/3_state_workflow/lifetable_output.png)
+  ![lifetable](../img/health_state_workflow/lifetable_output_3state.png)
 </figure>
 
 ```r
 # can also create a plot of mortality and disability curves
 prob_plots(init_state = 0, 87, trans_probs_3)
 ```
-
+Plot of survival probabilities to different states for 3-state models:
 <figure markdown>
-  ![mortality plot](../../img/3_state_workflow/plot_output.png)
+  ![mortality plot](../img/health_state_workflow/plot_output_3state.png)
 </figure>
 
 Statistics for 3-state models:
@@ -39,50 +39,41 @@ Statistics for 3-state models:
 # from transition probabilities, we can simulate lifetime paths
 sim_paths_3 <- simulate_health_state_paths(trans_probs_3, init_age=87, init_state = 0, cohort = 10000)
 
-# statistics (mean and standard deviation): 
-
-# average future lifetime
-future_life <- health3_afl(87, init_state = 0, trans_probs_3)
-
-# healthy future lifetime
-healthy_life <- health3_hfl(87, init_state = 0, trans_probs_3)
-
-# average future lifetime spent in disabled state
-disabled_life <- health3_dfl(87, init_state = 0, trans_probs_3)
-
-# time until onset of disability 
-first_disabled <- health3_time_to_disabled(87, trans_probs_3)
-
-# all survival statistics (essentially all of the above outputted in one dataframe)
-health3_survival_stats(87, init_state = 0, trans_probs_3)
+# all survival statistics (mean and standard deviation): 
+health_stats(n_states=3, init_age=87, init_state=0, trans_probs=trans_probs_3)
 ```
 
 <figure markdown>
-  ![statistics](../../img/3_state_workflow/stats_output.png)
+  ![statistics](../img/health_state_workflow/stats_output_3state.png)
 </figure>
 
-Statistics for 5-state models:
+Workflow for 5-state models:
 ```r
 # first we create a list of transition probability matrices for the 5-state model
-trans_probs_5 <- get_trans_probs(n_states=5, model_type='T', param_file=US_HRS_5, init_age=87, female=0, wave_index=13, latent = 0)
+trans_probs_5 <- get_trans_probs(n_states=5, model_type='T', param_file=US_HRS_5, init_age=87, female=0, year = 2012, wave_index = 13, latent = 0)
+
+# using the transition probabilities, we can generate life tables
+lifetable_5 <- create_life_table(trans_probs_5, init_age=87, init_state = 0, cohort = 100000)
 
 # from transition probabilities, we can simulate lifetime paths
-sim_paths_5 <- simulate_health_state_paths(trans_probs_5, init_age=87, init_state = 0, cohort = 10000)
+simulated_path_5 <- simulate_health_state_paths(trans_probs_5, init_age=87, init_state = 0, cohort = 10000)
 
-# statistics (mean and standard deviation): 
+# can also create a plot of surviving probabilities to different states
+prob_plots(init_age=87, init_state = 0, trans_probs_5)
 
-# average future lifetime
-total_time_alive <- health5_total_time_stats(sim_paths_5, 4)
-
-# healthy future lifetime
-total_time_healthy <- health5_total_time_stats(sim_paths_5, 0)
-
-# average future lifetime spent in M state
-total_time_M <- health5_total_time_stats(sim_paths_5, 1)
-
-# time until leaving H state
-first_time_H <- health5_first_time_stats(sim_paths_5, 0)
+# all survival statistics (mean and standard deviation):
+health_stats(n_states=5, init_age=87, init_state=0, trans_probs=trans_probs_5)
 
 ```
-
-
+Life table generated for 5-state models:
+<figure markdown>
+  ![lifetable](../img/health_state_workflow/lifetable_output_5state.png)
+</figure>
+Plot of survival probabilities to different states for 5-state models:
+<figure markdown>
+  ![mortality plot](../img/health_state_workflow/plot_output_5state.png)
+</figure>
+Statistics for 5-state models:
+<figure markdown>
+  ![statistics](../img/health_state_workflow/stats_output_5state.png)
+</figure>

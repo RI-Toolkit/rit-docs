@@ -34,5 +34,5 @@ insurance pricing.
 The general overview and usage of the module can be seen in the following flowchart: 
 
 <figure markdown>
-  ![3_state_flowchart](../../img/3_state_flowchart.png){width="750"}
+  ![3_state_flowchart](../../img/health_state_flowchart.png){width="750"}
 </figure>
