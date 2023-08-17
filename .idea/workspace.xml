@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac96cfa2-6d3e-4857-833b-786f856c5cd6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/Health/Statistics/summary_stats.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Health/Statistics/stats_3.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/Statistics/stats_3.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Health/Statistics/stats_5.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/Statistics/stats_5.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Health/lifetable.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/lifetable.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Health/simulation.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/simulation.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Health/workflow.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/workflow.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
-    </list>
+    <list default="true" id="ac96cfa2-6d3e-4857-833b-786f856c5cd6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
