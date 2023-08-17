@@ -5,33 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac96cfa2-6d3e-4857-833b-786f856c5cd6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/img/health_state_flowchart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/health_state_workflow/lifetable_output_3state.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/health_state_workflow/lifetable_output_5state.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/health_state_workflow/plot_output_3state.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/health_state_workflow/plot_output_5state.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/health_state_workflow/stats_output_3state.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/health_state_workflow/stats_output_5state.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/img/health_state_flowchart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/img/health_state_workflow/lifetable_output_3state.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/img/health_state_workflow/plot_output_3state.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/img/health_state_workflow/plot_output_5state.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/site/img/health_state_workflow/stats_output_3state.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Health/Statistics/summary_stats.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Economic Scenario Generator/top3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Health/Multi State Model/3_state_model.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/Multi State Model/3_state_model.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Health/Statistics/stats_3.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/Statistics/stats_3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Health/Statistics/stats_5.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/Statistics/stats_5.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Health/lifetable.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/lifetable.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Health/simulation.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/simulation.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Health/workflow.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Health/workflow.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Policy Valuation/cashflow.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Policy Valuation/cashflow.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/img/3_state_flowchart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/img/3_state_workflow/lifetable_output.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/img/3_state_workflow/plot_output.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/img/3_state_workflow/stats_output.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/img/3_state_flowchart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/img/3_state_workflow/lifetable_output.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/img/3_state_workflow/plot_output.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/img/3_state_workflow/stats_output.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +41,11 @@
     "git-widget-placeholder": "new__2023",
     "last_opened_file_path": "C:/Users/z5041702/GitHub/rit-docs",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Markdown"
+    ]
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

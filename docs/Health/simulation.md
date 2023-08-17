@@ -51,7 +51,7 @@ the probabilities given at each age. Death state, -1, is absorbing. The other st
 
 &nbsp;&nbsp; **Returns:**
 
-&nbsp;&nbsp;&nbsp;&nbsp; matrix (see below for details)
+&nbsp;&nbsp;&nbsp;&nbsp; Matrix (see below for details)
 
 &nbsp;&nbsp; **Usage:**
 

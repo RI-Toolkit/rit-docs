@@ -42,6 +42,7 @@ nav:
     - Statistics:
       - 'Health/Statistics/stats_3.md'
       - 'Health/Statistics/stats_5.md'
+      - 'Health/Statistics/summary_stats.md'
     - 'Health/workflow.md'
   - Economic Scenario Generator:
     - 'Economic Scenario Generator/overview.md'

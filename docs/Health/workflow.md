@@ -40,7 +40,7 @@ Statistics for 3-state models:
 sim_paths_3 <- simulate_health_state_paths(trans_probs_3, init_age=87, init_state = 0, cohort = 10000)
 
 # all survival statistics (mean and standard deviation): 
-health_stats(n_states=3, init_age=87, init_state=0, trans_probs=trans_probs_3)
+health_stats(n_states=3, model_type='T', init_age=87, init_state=0, trans_probs=trans_probs_3)
 ```
 
 <figure markdown>
@@ -50,7 +50,7 @@ health_stats(n_states=3, init_age=87, init_state=0, trans_probs=trans_probs_3)
 Workflow for 5-state models:
 ```r
 # first we create a list of transition probability matrices for the 5-state model
-trans_probs_5 <- get_trans_probs(n_states=5, model_type='T', param_file=US_HRS_5, init_age=87, female=0, year = 2012, wave_index = 13, latent = 0)
+trans_probs_5 <- get_trans_probs(n_states=5, model_type='T', param_file=US_HRS_5, init_age=87, female=0, year = 2022, wave_index = 13, latent = 0)
 
 # using the transition probabilities, we can generate life tables
 lifetable_5 <- create_life_table(trans_probs_5, init_age=87, init_state = 0, cohort = 100000)
@@ -62,7 +62,7 @@ simulated_path_5 <- simulate_health_state_paths(trans_probs_5, init_age=87, init
 prob_plots(init_age=87, init_state = 0, trans_probs_5)
 
 # all survival statistics (mean and standard deviation):
-health_stats(n_states=5, init_age=87, init_state=0, trans_probs=trans_probs_5)
+health_stats(n_states=5, model_type = 'T', init_age=87, init_state=0, trans_probs=trans_probs_5)
 
 ```
 Life table generated for 5-state models:

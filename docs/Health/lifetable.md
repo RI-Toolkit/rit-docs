@@ -25,7 +25,7 @@ the initial state and the initial age that the starting cohort is in.
 
 &nbsp;&nbsp;&nbsp;&nbsp; init_age : numeric
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * numeric denoting initial age of individual*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *numeric denoting initial age of individual*
 
 &nbsp;&nbsp;&nbsp;&nbsp; init_state : numeric
 
@@ -39,7 +39,7 @@ the initial state and the initial age that the starting cohort is in.
 
 &nbsp;&nbsp; **Returns:**
 
-&nbsp;&nbsp;&nbsp;&nbsp; a list of life table matrices
+&nbsp;&nbsp;&nbsp;&nbsp; A life table matrix
 
 &nbsp;&nbsp; **Usage:**
 ```r
@@ -105,7 +105,7 @@ lifetable <- create_life_table(trans_probs, init_age=65, init_state = 0, cohort 
 
 &nbsp;&nbsp; **Returns:**
 
-&nbsp;&nbsp;&nbsp;&nbsp; a list of life table matrices
+&nbsp;&nbsp;&nbsp;&nbsp; A list of life table matrices if mean = FALSE, or a life table matrix if mean = TRUE
 
 &nbsp;&nbsp; **Usage:**
 
