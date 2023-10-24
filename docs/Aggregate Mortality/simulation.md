@@ -13,7 +13,7 @@ When simulating for a cohort, the number of people still alive at each age is re
 
 ### Simulate Individual Life Path
 
-**sim_indiv_path(init_age, sex = "F", death_probs = NULL, closure_age = 130, n_sim = 10000, seed = NULL)**
+**sim_indiv_path(init_age, female = 1, death_probs = NULL, closure_age = 130, n_sim = 10000, seed = NULL)**
 
 &nbsp;&nbsp; **Parameters:**
 
@@ -21,10 +21,9 @@ When simulating for a cohort, the number of people still alive at each age is re
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *integer denoting initial age of individual*
 
-&nbsp;&nbsp;&nbsp;&nbsp; sex : character
+&nbsp;&nbsp;&nbsp;&nbsp; female : numeric
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *character denoting the gender of individual, "F" for female and
-"M" for male*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *numeric denoting the gender of individuals, 1 for female and 0 for male*
 
 &nbsp;&nbsp;&nbsp;&nbsp; death_probs : vector
 
@@ -73,7 +72,7 @@ maximum age one can be).
 
 ```r
 # Simulate life paths for females starting at age 60
-sim_indiv_path(init_age = 60, sex = "F")
+sim_indiv_path(init_age = 60, female = 1)
 
 # Suppose we want to use period 1-yr death probabilities instead
 AUS_male_rates <- mortality_AUS_data$rate$male
@@ -85,14 +84,14 @@ kannisto_q <- complete_old_age(AUS_male_qx, ages, old_ages, method = "kannisto",
 
 # Consider males aged 55 in the year 2018
 qx_55_2018 <- kannisto_q[as.character(55:130), "2018"]
-sim_indiv_path(init_age = 55, sex = "M", death_probs = qx_55_2018)                         
+sim_indiv_path(init_age = 55, female = 0, death_probs = qx_55_2018)                         
 ```
 
 ---
 
 ### Simulate Cohort Life Path
 
-**sim_cohort_path_realised(init_age, sex = "F", death_probs = NULL, closure_age = 130,
+**sim_cohort_path_realised(init_age, female = 1, death_probs = NULL, closure_age = 130,
 cohort = 1000, n_sim = 10000, seed = NULL)**
 
 &nbsp;&nbsp; **Parameters:**
@@ -101,10 +100,9 @@ cohort = 1000, n_sim = 10000, seed = NULL)**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *integer denoting initial age of cohort*
 
-&nbsp;&nbsp;&nbsp;&nbsp; sex : character
+&nbsp;&nbsp;&nbsp;&nbsp; female : numeric
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *character denoting the gender of cohort, "F" for female and
-"M" for male*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *numeric denoting the gender of individuals, 1 for female and 0 for male*
 
 &nbsp;&nbsp;&nbsp;&nbsp; death_probs : vector
 
@@ -157,7 +155,7 @@ maximum age one can be).
 
 ```r
 # Simulate life paths for cohort of 1000 females starting at age 60
-sim_cohort_path_realised(init_age = 60, sex = "F")
+sim_cohort_path_realised(init_age = 60, female = 1)
 
 # Suppose we want to use period 1-yr death probabilities instead
 AUS_male_rates <- mortality_AUS_data$rate$male
@@ -169,7 +167,7 @@ kannisto_q <- complete_old_age(AUS_male_qx, ages, old_ages, method = "kannisto",
 
 # Consider 100 males aged 55 in the year 2018
 qx_55_2018 <- kannisto_q[as.character(55:130), "2018"]
-sim_cohort_path_realised(init_age = 55, sex = "M",
+sim_cohort_path_realised(init_age = 55, female = 0,
                          death_probs = qx_55_2018, cohort = 100)                         
 ```
 
@@ -177,7 +175,7 @@ sim_cohort_path_realised(init_age = 55, sex = "M",
 
 ### Simulate Expected Cohort Life Path
 
-**sim_cohort_path_expected(init_age, sex = "F", death_probs = NULL, closure_age = 130,
+**sim_cohort_path_expected(init_age, female = 1, death_probs = NULL, closure_age = 130,
 cohort = 1000)**
 
 &nbsp;&nbsp; **Parameters:**
@@ -186,10 +184,9 @@ cohort = 1000)**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *integer denoting initial age of cohort*
 
-&nbsp;&nbsp;&nbsp;&nbsp; sex : character
+&nbsp;&nbsp;&nbsp;&nbsp; female : numeric
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *character denoting the gender of cohort, "F" for female and
-"M" for male*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *numeric denoting the gender of individuals, 1 for female and 0 for male*
 
 &nbsp;&nbsp;&nbsp;&nbsp; death_probs : vector
 
@@ -228,7 +225,7 @@ maximum age one can be).
 
 ```r
 # Simulate expected life path for cohort of 1000 females starting at age 60
-sim_cohort_path_expected(init_age = 60, sex = "F")
+sim_cohort_path_expected(init_age = 60, female = 1)
 
 # Suppose we want to use period 1-yr death probabilities instead
 AUS_male_rates <- mortality_AUS_data$rate$male
@@ -240,6 +237,6 @@ kannisto_q <- complete_old_age(AUS_male_qx, ages, old_ages, method = "kannisto",
 
 # Consider 100 males aged 55 in the year 2018
 qx_55_2018 <- kannisto_q[as.character(55:130), "2018"]
-sim_cohort_path_expected(init_age = 55, sex = "M",
+sim_cohort_path_expected(init_age = 55, female = 0,
                          death_probs = qx_55_2018, cohort = 100)
 ```

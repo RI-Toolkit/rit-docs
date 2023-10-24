@@ -15,21 +15,13 @@ or passed into the *value_policy* function for pricing statistics.
     - **Pooled Annuity**: If the policyholder is alive, pays benefit after factoring mortality experience adjustment $(p_{x+t}/p_{x+t}^*)$ and interest rate adjustment $(1+r_{x+t}^*)/(1+r_{x+t})$. Otherwise, no benefit is paid.
     - **Reverse Mortgage**: If the policyholder dies during the time period, pays the surplus of the loan value deducted by house value after adjusting for cost-of-sale. If the surplus is negative or policyholder doesn't die during period, no benefit is paid.
 
-**simulate_cf(policy, age, sex, seed, n)**
+**simulate_cf(policy, seed = 0, n = 100, state = NULL, econ_var = NULL, cohort_death_probs = NULL)**
 
 &nbsp;&nbsp; **Parameters:**
 
 &nbsp;&nbsp;&nbsp;&nbsp; **policy** : Policy object 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Policy object generated from create_policy function* (see [ Creating Policy Object](policy.md))
-
-&nbsp;&nbsp;&nbsp;&nbsp; **age** : numeric
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *Initial age of policyholder in years*
-
-&nbsp;&nbsp;&nbsp;&nbsp; **sex** : character
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *sex = "F" (female), "M" (male)*
 
 &nbsp;&nbsp;&nbsp;&nbsp; **seed** : numeric
 
@@ -59,6 +51,10 @@ or passed into the *value_policy* function for pricing statistics.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (see [Economic Scenario Generator](../Economic Scenario Generator/discrete_esg.md) for example implementation)
 
+&nbsp;&nbsp;&nbsp;&nbsp; **cohort_death_probs** : vector
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *a vector of 1-year cohort death probabilities*
+
 &nbsp;&nbsp; **Returns:**
 
 &nbsp;&nbsp;&nbsp;&nbsp; [SimCashflow](#simcf) object 
@@ -66,7 +62,7 @@ or passed into the *value_policy* function for pricing statistics.
 &nbsp;&nbsp; **Usage:**
 ```r
 ap <- create_policy_AP(400000, 60000)
-cf <- simulate_cf(policy = ap, age = 65, sex = "M", n = 1000)
+cf <- simulate_cf(policy = ap, age = 65)
 ```
 
 !!! note

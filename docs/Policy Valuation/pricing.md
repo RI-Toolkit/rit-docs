@@ -25,29 +25,30 @@ Conducts valuation of a given policy, providing summary statistic & plots on the
 &nbsp;&nbsp; **Usage:**
 ```r
 > ap <- create_policy_AP(400000, 60000)
-> cf <- simulate_cf(policy = ap, age = 65, sex = "M", n = 1000)
+> cf <- simulate_cf(policy = ap, n = 1000)
 > v <- value_policy(ap, cf)
 ========= Policy Details =========
 Type        : Account Based Policy
+Sample Size : 1000
 ----------------------------------
 Balance     : 4e+05
 Expense     : 60000
 
 ======= Summary Statistics =======
-Mean        : $343,583.95
-Std Dev     : $39,612.09
+Mean        : $ 475,062.33
+Std Dev     : $ 90,802.31
 ----------------------------------
-Minimum     : $55,283.93
-Maximum     : $590,965.62
+Minimum     : $ 292,583.25
+Maximum     : $ 1,035,790.55
 ----------------------------------
-P_0.25      : $316,733.50
-P_0.50      : $339,143.08
-P_0.75      : $365,797.98
-P_0.95      : $413,909.46
-P_0.99      : $455,971.51
+P_0.25      : $ 414,751.54
+P_0.50      : $ 459,701.37
+P_0.75      : $ 520,606.57
+P_0.95      : $ 649,646.49
+P_0.99      : $ 748,371.56
 ----------------------------------
-Skewness    : 0.44
-Kurtosis    : 5.47
+Skewness    : 1.19
+Kurtosis    : 5.62
 ==================================
 ```
 
