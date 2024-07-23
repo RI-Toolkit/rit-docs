@@ -1,4 +1,4 @@
-# # 5-State Model
+# 5-State Model
 
 This module conducts mortality analysis using the 5 state model with the following transitions: 
 
